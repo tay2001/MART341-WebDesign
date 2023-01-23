@@ -1,0 +1,13 @@
+What is a directory, and what is its relationship to files?
+Information, images, data, etc. is stored in files, which are then stored in directories.
+Directories can tore other directories, which form directory trees.
+Essentially, directories are used to store, organize, and separate files and/or other directories.
+
+How are VCS useful?
+One way VCS are useful because it allows the users to save a project at steps throughout its lifetime.
+So, one can roll back to a previous state or even all the way back to the beginning.
+You can also compare changes, have other branches, and see who has made changes and when.
+
+Do you have a favorite artistic medium? Why is it your favorite?
+It isn't necessarily a visible artistic medium, but I really enjoy music.
+I have played violin for over a decade and just really enjoy the stress relief and how enjoyable it is.
