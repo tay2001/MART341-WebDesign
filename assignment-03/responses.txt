@@ -1,0 +1,8 @@
+What is the relationship between an IP address and the DNS?
+Each device that is connected to the internet has a unique IP address, with the DNS translating domain names to these IP addresse.
+
+What is a cookie?
+Cookies are pieces of data that are from a website that is stored within a web browser that the website can then retrieve at a later time.
+
+What are the three essential parts of a URL
+The three parts of a URL is the path leading to a specific web page, the HTTP or HTTPS protocol, and the domain name that identifies the site.
