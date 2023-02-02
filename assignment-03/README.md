@@ -6,5 +6,5 @@ Three things I have learned so far:
 <li>Steps that are good to follow for building websites.</li>
 </ul>
 
-<img src="/images/screenshot.png" alt="Screenshot for work">
+<img src="images/screenshot.png" alt="Screenshot for work">
 <a href="responses.txt">Responses</a>
