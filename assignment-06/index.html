@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 5 - About Me </title>
+  <meta name="author" content="Taylor Powell">
+  <meta name="description" content="This is my list assignment, naming my dogs!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+  <div class="dcont">
+    <div class="des">
+
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/lyra.jpg" style="width:100%">
+          <div class="text">Lyra</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/stella.jpg" style="width:100%">
+          <div class="text">Stella</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/odin.jpg" style="width:100%">
+          <div class="text">Odin</div>
+        </div>
+
+
+      </div>
+      <br>
+
+
+      <!--<img src="imgs/hs.PNG"  height=500px>-->
+      <h1>My Dogs</h1>
+
+      <p>They were born and raised in <address>Kalispell, MT</address></p>
+      <p>We have three of them, their names are: </p>
+      <ol>
+        <li><strong>Lyra: </strong> a purebred beagle</li>
+        <li><strong>Stella: </strong> a purebred beagle</li>
+        <li><strong>Odin: </strong> a black lab/retriever mix</li>
+      </ol>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+  }
+</script>
