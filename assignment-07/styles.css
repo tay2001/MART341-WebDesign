@@ -1,0 +1,152 @@
+body {
+    background-color: #cce4ed;
+    margin-top: 25px; margin-right:  300px; margin-left:  300px; margin-bottom: 100px;
+    font-family: sans-serif;
+    background-image: url("imgs/border.png");
+    height: 150vh;
+    min-height: 740px;
+    background-position: center;
+    background-size: cover ;
+
+
+
+}
+
+.h {
+    height: 100vh;
+    min-height: 740px;
+
+    background-position: left;
+    background-size: cover;
+
+}
+
+.h .title {
+    font-size: 22pt;
+    color: white;
+    float: right;
+
+    padding: 2em;
+    /*rounded corners*/
+    border-radius: 25px;
+    text-align: center;
+    background-color: lightsteelblue;
+}
+
+.title h1 {
+    font-family: serif;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+}
+
+.title h2 {
+    font-family: serif;
+    font-weight: 300;
+    line-height: 0.5em;
+}
+
+.h .nav {
+    font-family: serif;
+    font-weight: 300;
+    color: white;
+    margin-top: 2em;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.h .nav a {
+
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.h .nav-item {
+    font-size: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-width: 1px 0;
+}
+
+.h .nav-item:hover {
+    color: white;
+    /*slightly opaque*/
+    opacity: 75%;
+    background-color: lightgray;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000000;
+    margin-top: 30px;
+}
+img{
+    /*rounded corners*/
+    border-radius: 25px;
+}
+p{
+    font-family: Verdana, sans-serif;
+    text-align:  justify;
+    font-weight: lighter;
+
+}
+ul{
+    font-family: Verdana, sans-serif;
+    text-align:  justify;
+    font-weight: lighter;
+}
+
+h3{
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000000;
+    margin-top: 30px;
+}
+
+legend {
+    width: 118px;
+    padding: 2px;
+    margin-left: calc(50% - 35px - 20px);
+}
+@media (max-width: 865px) {
+    .h {
+        min-height: 730px;
+    }
+    .h .title {
+        font-size: 18pt;
+    }
+}
+
+@media (max-width: 585px) {
+    .h {
+        min-height: 500px;
+    }
+    .h .title {
+        font-size: 14pt;
+        margin: 0;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 445px) {
+    .h .title {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 865px) {
+    .dcont {
+        font-size: 1.5em;
+    }
+}
+

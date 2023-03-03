@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Camp Classic Registration</title>
+    <meta name="author" content="Taylor Powell">
+    <meta name="description" content="This is my form assignment, a camp registration page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+
+
+</head>
+<body>
+<h1>Camp Classic Registration</h1>
+<fieldset>
+  <br>
+  <form action="functions.js" method="POST" autocomplete="on"id = "myform">
+    <legend>REGISTRATION</legend>
+    <p>Enter your information and apply below!</p>
+    <ul>
+      <li><label for="fname">Child's First Name:</label>
+        <input type="text" name="fname" id="fname"></li>
+      <br>
+      <li><label for="lname">Child's Last Name:</label>
+        <input type="text" name="lname" id="lname"></li>
+      <br>
+      <li><label for="email">Email:</label>
+        <input type="email" name="email" id="email"></li>
+      <br>
+
+      <li><label for="phone">Phone Number (xxx-xxx-xxxx):</label>
+        <input type="tel" name="telephone" id="telephone"maxlength="13" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></li>
+      <br>
+      <li><label for="age">Age:</label>
+
+        <select id="ages" name="age">
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+        </select></li><br>
+
+      <li>Shirt size:
+        <ul>  <li>
+          <input type="radio" id="shirt1" name="size" value="Youth Small"> Youth Small</li>
+          <li>
+            <input type="radio" id="shirt2" name="size" value="Youth Med"> Youth Med</li>
+          <li>
+            <input type="radio" id="shirt3" name="size" value="Youth Large"> Youth Large</li>
+          <li>
+            <input type="radio" id="shirt4" name="size" value="Small" checked="checked"> Small</li>
+          <li>
+            <input type="radio" id="shirt5" name="size" value="Med"> Medium</li>
+          <li>
+            <input type="radio" id="shirt6" name="size" value="Large"> Large</li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li>Interesting Activities:
+        <ul>  <li>
+          <input type="checkbox" id="activity1" name="activity" value="first">
+          <label id ="a1">Orchestra</label></li>
+
+          <li><input type="checkbox" id="activity2" name="activity2" value="second">
+            <label id ="a2">Band</label></li>
+
+          <li><input type="checkbox" id="activity3" name="activities" value="third">
+            <label id ="a3">Percussion</label></li>
+
+          <li><input type="checkbox" id="activity4" name="activities" value="fourth"><label id ="a4">Solo/Duets</label></li>
+
+          <li><input type="checkbox" id="activity5" name="activities" value="fifth"><label id ="a5">Small Ensembles</label></li>
+
+          <li><label id ="a6"><input type="checkbox" id="activity6" name="activities" value="sixth">Large Ensemble</label></li>
+        </ul>
+      </li>
+
+      <br>
+      <li><label for="text" name="why" id="why">Why are you interested in Camp Classic?
+        <br><textarea name="whycampclassic" rows="5" cols="50" name="why">My son/daughter is stoked about classical music!</textarea></label>
+      </li>
+      <br>
+
+      <li><form action="/childandinstrument.php" method="POST" enctype="multipart/form-data">
+        <label>Send a photo of yourself with your instrument!<em>(optional) </em><br>
+          <input type="file" name="photo" id="photo"></label></form></li>
+
+      <br>
+      <li>Please put the date of submission:
+        <br><label for="date" name="date" id="date"><input type="date" name="name" value="2021-10-12"></label></li>
+
+
+    </ul>
+
+    <button type="button" onclick="submitFunction(); ageFunction();">Register</button>
+
+    <button type="button" onclick="cancelFunction()">Cancel</button>
+
+    <p id="submit"></p>
+    <p id="agegroup"></p>
+    <img id="smiley" style="width: 200px; border-radius: 25%;">
+
+</fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+<h3>Links</h3>
+<p><a class = "navigation"
+      href = "index.html">Homepage</a></p>
+
+
+
+
+
+
+</body></html>
+
+<script>
+  function submitFunction() {
+    var x = document.getElementById("fname").value + ", thank you for registering! ";
+
+    document.getElementById("a1").style.color ="red"
+    document.getElementById("a2").style.color ="red"
+    document.getElementById("a3").style.color ="red"
+    document.getElementById("a4").style.color ="red"
+    document.getElementById("a5").style.color ="red"
+    document.getElementById("a6").style.color ="red"
+
+    document.getElementById("submit").style.fontSize ="30px";
+    document.getElementById("submit").style.fontFamily ="Verdana";
+    document.getElementById("submit").innerHTML = x;
+    document.getElementById("smiley").src ='imgs/star.png';
+  }
+
+  function cancelFunction() {
+    document.getElementById('myform').reset();
+
+    document.getElementById("a1").style.color = "black"
+    document.getElementById("a2").style.color ="black"
+    document.getElementById("a3").style.color ="black"
+    document.getElementById("a4").style.color ="black"
+    document.getElementById("a5").style.color ="black"
+    document.getElementById("a6").style.color ="black"
+
+    document.getElementById("submit").style.fontSize ="30px"
+    document.getElementById("submit").style.fontFamily ="Verdana";
+    document.getElementById("submit").innerHTML = "Sorry to see you go!"
+  }
+
+  function ageFunction(){
+    var x = document.getElementById("ages").value;
+    if(x<=13) {
+      document.getElementById("agegroup").style.fontSize ="30px";
+      document.getElementById("agegroup").style.fontFamily ="Verdana";
+      document.getElementById("agegroup").innerHTML = "You're a part of the Concert Music Group!"
+    }
+    else {
+      document.getElementById("agegroup").style.fontSize ="30px";
+      document.getElementById("agegroup").style.fontFamily ="Verdana";
+      document.getElementById("agegroup").innerHTML = "You're a part of the Chamber Music Group!"
+    }
+
+  }
+</script>
