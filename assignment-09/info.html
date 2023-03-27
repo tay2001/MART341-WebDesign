@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info on Beagles</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+<div class="h">
+    <!-- div for title -->
+    <div class="title">
+
+
+        <h1>Beagles</h1>
+        <h2>Information</h2>
+
+        <div class="nav">
+            <a href="index.html">
+                <div class="nav-item">Home</div>
+            </a>
+            <a href="origin.html">
+                <div class="nav-item">Origin</div>
+            </a>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+<div class="dcont">
+
+
+
+    <div class="des">
+
+
+        <h1>Information</h1>
+        <p>Beagles are usually 18 to 35lb in weight and 13 to 16in in height. They have a strong jaw, long soft ears, a somewhat domed skull, and a gumdrop nose.</p>
+        <p>Beagles have a muscular body with a medium-length, smooth, hard coat.</p>
+        <p>The beagles white tail tip was bred selectively so that it was a flag for their location when sniffing a scent. Below is the breed's famous tricolor coat.</p>
+    </div>
+</div>
+<div id="shape"></div>
+<div id="shape2"></div>
+<div id="shape3"></div>
+<button style="text-align: center;">Move</button>
+<br>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#shape").animate({left : '500px'});
+            $("#shape2").animate({left : '600px'});
+            $("#shape3").animate({left : '700px'});
+        });
+    });
+
+</script>
+</body>
+</html>
