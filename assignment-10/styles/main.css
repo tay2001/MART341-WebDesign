@@ -16,7 +16,7 @@ body{
     box-shadow: 0 10px 10px#6F9FD6;
     border-radius:100px;
 }
-.c p {
+#quote {
     text-align: center;
     font-family: fantasy;
     color: #6F9FD6;
