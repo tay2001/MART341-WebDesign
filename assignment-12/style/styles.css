@@ -1,0 +1,223 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+    font-weight: 300;
+    background-color: #d3d3d3;
+}
+.dcont {
+    min-height: 50vh;
+    font-size: 2em;
+}
+
+.des{
+    margin: 25vh;
+    padding: 1em;
+    border-radius: 25px;
+    text-align: center;
+    width: 75%;
+    min-width: 300px;
+    background-color: lightsteelblue;
+
+}
+
+
+.h {
+    height: 100vh;
+    min-height: 740px;
+    padding-top: 200px;
+    background-position: left;
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .8);
+}
+
+.h .title {
+    font-size: 22pt;
+    color: white;
+    float: right;
+    margin-right: 300px;
+    padding: 2em;
+    /*rounded corners*/
+    border-radius: 25px;
+    text-align: center;
+    background-color: lightsteelblue;
+}
+
+.title h1 {
+    font-family: serif;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+}
+
+.title h2 {
+    font-family: serif;
+    font-weight: 300;
+    line-height: 0.5em;
+}
+
+.h .nav {
+    font-family: serif;
+    font-weight: 300;
+    color: white;
+    margin-top: 2em;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.h .nav a {
+
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.h .nav-item {
+    font-size: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    float: right;
+
+    border: 1px solid lightgrey;
+    border-width: 1px 0;
+}
+
+.h .nav-item:hover {
+    color: white;
+    /*slightly opaque*/
+    opacity: 75%;
+    background-color: lightgray;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 60px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    color: white;
+}
+
+.fa-github {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: serif;
+    font-weight: 300;
+    color: white;
+    margin-top: 2em;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .8);
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    float: right;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .8);
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: rgba(195, 209, 229, 0.99);
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 865px) {
+    .dcont {
+        font-size: 1.5em;
+    }
+
+    .dropdown {
+        font-size: 1.5em;
+    }
+
+    .dropdown-content a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 585px) {
+    .dropdown-content a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 445px) {
+    .dropdown-content a {
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 865px) {
+    .h {
+        min-height: 730px;
+    }
+    .h .title {
+        font-size: 18pt;
+    }
+}
+
+@media (max-width: 585px) {
+    .h {
+        min-height: 500px;
+    }
+    .h .title {
+        font-size: 14pt;
+        margin: 0;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 445px) {
+    .h .title {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 865px) {
+    .dcont {
+        font-size: 1.5em;
+    }
+}
+
