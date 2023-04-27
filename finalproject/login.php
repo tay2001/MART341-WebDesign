@@ -1,6 +1,13 @@
 <?php
 session_start();
+
+if(isset($_SESSION['user_id'])){
+  header("Location: index.php");
+}
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -32,8 +39,6 @@ session_start();
 </head>
 
 <body>
-
-  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -68,9 +73,18 @@ session_start();
               <a class = "nav_link" href="signup.php">
                 Sign up &nbsp;      
               </a>
-              <a class = "nav_link" href="login.php">
+
+              <?php if(isset($_SESSION['user_id'])): ?>
+    <a class = "nav_link" href="logout.php">
+                Log out &nbsp; 
+              </a>
+<?php else: ?>
+    <a class = "nav_link" href="login.php">
                 Log in &nbsp; 
               </a>
+<?php endif; ?>
+
+            
               <a class ="nav_link" href="account.php">
                 Account</a>
               
@@ -80,95 +94,39 @@ session_start();
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="slider_number-container ">
-        <div class="number-box">
-          <span>
-            01
-          </span>
-          <hr>
-          <span>
-            02
-          </span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      Welcome to
-                    </h2>
-                    <h1>
-                      Fleur
-                    </h1>
-                    <p>
-                      Fleur is a flower shop catering to your needs! We have been open since 2012 dealing with everything flowers.
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We do...
-                    </h2>
-                    <h1>
-                      Weddings, Gifts, Corsages!
-                    </h1>
-                    <p>
-                      Everything concerning flowers, we got them! From Prom, to Valentine's Day, to weddings, we can do everything!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We have..
-                    </h2>
-                    <h1>
-                      Roses, Peonies, Daffodils!
-                    </h1>
-                    <p>
-                      We either have your flower needs in shop, or by custom order! Please ask!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel_btn-container">
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </section>
-    <!-- end slider section -->
-  </div>
 
-  <!-- info section -->
+
+
+
+          <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign in</h2>
+                        <form method="POST" action="loginenter.php" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" required="required" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass"
+                                required="required" placeholder="Password"/>
+                            </div>
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+
+                         <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+
+    <!-- info section -->
   <section class="info_section layout_padding">
     <div class="container">
       <div class="row">
@@ -203,11 +161,7 @@ session_start();
                   Gallery
                 </a>
               </li>
-              <li>
-                <a href="contact.php">
-                  Contact Us
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -253,11 +207,5 @@ session_start();
     </p>
   </footer>
   <!-- footer section -->
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
-
-</body>
 
 </html>

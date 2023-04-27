@@ -68,9 +68,15 @@ session_start();
               <a class = "nav_link" href="signup.php">
                 Sign up &nbsp;      
               </a>
-              <a class = "nav_link" href="login.php">
+             <?php if(isset($_SESSION['user_id'])): ?>
+    <a class = "nav_link" href="logout.php">
+                Log out &nbsp; 
+              </a>
+<?php else: ?>
+    <a class = "nav_link" href="login.php">
                 Log in &nbsp; 
               </a>
+<?php endif; ?>
               <a class ="nav_link" href="account.php">
                 Account</a>
               
@@ -201,11 +207,6 @@ session_start();
               <li>
                 <a href="gallery.php">
                   Gallery
-                </a>
-              </li>
-              <li>
-                <a href="contact.php">
-                  Contact Us
                 </a>
               </li>
             </ul>

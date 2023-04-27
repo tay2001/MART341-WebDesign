@@ -1,6 +1,8 @@
+
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -29,9 +31,48 @@ session_start();
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+
+  <style>
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: flex;
+}
+
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+ul{
+  list-style-type: none;
+}
+</style>
 </head>
 
-<body>
+<body class="sub_page">
 
   <div class="hero_area">
     <!-- header section strats -->
@@ -47,7 +88,7 @@ session_start();
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
@@ -61,6 +102,7 @@ session_start();
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="order.php">Cart</a>
+              
                 </li>
               </ul>
             </div>
@@ -68,9 +110,15 @@ session_start();
               <a class = "nav_link" href="signup.php">
                 Sign up &nbsp;      
               </a>
-              <a class = "nav_link" href="login.php">
+             <?php if(isset($_SESSION['user_id'])): ?>
+    <a class = "nav_link" href="logout.php">
+                Log out &nbsp; 
+              </a>
+<?php else: ?>
+    <a class = "nav_link" href="login.php">
                 Log in &nbsp; 
               </a>
+<?php endif; ?>
               <a class ="nav_link" href="account.php">
                 Account</a>
               
@@ -80,93 +128,68 @@ session_start();
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="slider_number-container ">
-        <div class="number-box">
-          <span>
-            01
-          </span>
-          <hr>
-          <span>
-            02
-          </span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      Welcome to
-                    </h2>
-                    <h1>
-                      Fleur
-                    </h1>
-                    <p>
-                      Fleur is a flower shop catering to your needs! We have been open since 2012 dealing with everything flowers.
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We do...
-                    </h2>
-                    <h1>
-                      Weddings, Gifts, Corsages!
-                    </h1>
-                    <p>
-                      Everything concerning flowers, we got them! From Prom, to Valentine's Day, to weddings, we can do everything!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We have..
-                    </h2>
-                    <h1>
-                      Roses, Peonies, Daffodils!
-                    </h1>
-                    <p>
-                      We either have your flower needs in shop, or by custom order! Please ask!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel_btn-container">
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- end slider section -->
   </div>
+
+
+  <!-- gallery section -->
+  <section class="gallery_section layout_padding">
+
+    <div class="heading_container justify-content-center">
+      <h2>
+        Our Gallery
+      </h2>
+    </div>
+  </section>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items... ie: Rose, Arrangement, Corsage">
+
+<ul id="myUL">
+  
+
+  <li>
+    <div class="card">
+    <form method = "post" action="cart.php">
+  <img src="images/g-7.jpg" alt="corsage" width="500" height="400">
+  <h1>Corsages</h1>
+  <p class="price">$20</p>
+  <p>Whether for a Wedding or Prom, we got you!</p>
+<div class="form-group form-button">
+<button type="submit" name="idVal" value="001" class="form-submit">Add to Cart</button>
+                            </div>
+</div></li>
+
+<br>
+</form>
+<form method = "post" action="cart.php">
+<li><div class="card">
+  <img src="images/g-3.jpg" alt="simplearrangement" width="500" height="400">
+  <h1>Arrangements</h1>
+  <p class="price">$30.00</p>
+  <p>Simple arrangements at a modest price</p>
+  <div class="form-group form-button">
+ <button type="submit" name="idVal" value="002" class="form-submit">Add to Cart</button>
+                            </div>
+</div></li>
+
+<br>
+</form>
+<form method = "post" action="cart.php">
+<li><div class="card">
+  <img src="images/g-9.jpg" alt="rosebox" width="500" height="400">
+  <h1>Rose Box</h1>
+  <p class="price">$40.00</p>
+  <p>Simple box of roses in Pink, red, yellow- every color!</p>
+<div class="form-group form-button">
+<button type="submit" name="idVal" value="003" class="form-submit">Add to Cart</button>
+</div>
+                            
+</div></li>
+
+</ul>
+</form>
+<br>
+
+
 
   <!-- info section -->
   <section class="info_section layout_padding">
@@ -203,11 +226,7 @@ session_start();
                   Gallery
                 </a>
               </li>
-              <li>
-                <a href="contact.php">
-                  Contact Us
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -245,6 +264,7 @@ session_start();
 
   <!-- end info_section -->
 
+
   <!-- footer section -->
   <footer class="container-fluid footer_section">
     <p>
@@ -254,10 +274,31 @@ session_start();
   </footer>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
+
+
 
 </body>
 
 </html>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, h1, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    h1 = li[i].getElementsByTagName("h1")[0];
+    txtValue = h1.textContent || h1.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>

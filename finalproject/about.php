@@ -31,7 +31,7 @@ session_start();
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="sub_page">
 
   <div class="hero_area">
     <!-- header section strats -->
@@ -47,7 +47,7 @@ session_start();
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
@@ -68,107 +68,75 @@ session_start();
               <a class = "nav_link" href="signup.php">
                 Sign up &nbsp;      
               </a>
-              <a class = "nav_link" href="login.php">
+              <?php if(isset($_SESSION['user_id'])): ?>
+    <a class = "nav_link" href="logout.php">
+                Log out &nbsp; 
+              </a>
+<?php else: ?>
+    <a class = "nav_link" href="login.php">
                 Log in &nbsp; 
               </a>
+<?php endif; ?>
               <a class ="nav_link" href="account.php">
                 Account</a>
               
+            </div>
             </div>
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="slider_number-container ">
-        <div class="number-box">
-          <span>
-            01
-          </span>
-          <hr>
-          <span>
-            02
-          </span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      Welcome to
-                    </h2>
-                    <h1>
-                      Fleur
-                    </h1>
-                    <p>
-                      Fleur is a flower shop catering to your needs! We have been open since 2012 dealing with everything flowers.
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We do...
-                    </h2>
-                    <h1>
-                      Weddings, Gifts, Corsages!
-                    </h1>
-                    <p>
-                      Everything concerning flowers, we got them! From Prom, to Valentine's Day, to weddings, we can do everything!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="col-lg-6 col-md-8">
-                  <div class="detail_box">
-                    <h2>
-                      We have..
-                    </h2>
-                    <h1>
-                      Roses, Peonies, Daffodils!
-                    </h1>
-                    <p>
-                      We either have your flower needs in shop, or by custom order! Please ask!
-                    </p>
-                    <div>
-                      <a href="gallery.php">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel_btn-container">
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- end slider section -->
   </div>
 
-  <!-- info section -->
+  <!-- about section -->
+  <section class="about_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-7">
+          <div id="slideshow">
+   <div>
+     <img src="images/about-1.png" width="500" height="400">
+   </div>
+   <div>
+     <img src="images/g-1.jpg"width="500" height="400">
+   </div>
+      <div>
+     <img src="images/flower.png"width="500" height="400">
+   </div>
+   <div>
+     At Fleur we are everything about flowers!
+   </div>
+</div>
+        </div>
+        <div class="col-md-5 col-xl-5">
+          <div class="detail_box">
+            <div class="heading_container justify-content-end">
+              <h2>
+                About Fleur
+              </h2>
+            </div>
+            <p>
+              Located on N. Higgins since 2012, we have been proudly serving the Missoula community since! From flowery gifts, beautiful weddings, simple home decor.. We have the flowers for all your needs!
+
+              This is a school project at the University of Montana. Credit to Free HTML Templates for the bootstrap template and pictures used throughout the website. Credit to W3 Schools for resources in creating the website.
+              <br>
+
+              Here is some slideshow of flowers!
+              <br><br><br>
+              
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+  </section>
+  <!-- end about section -->
+
+ <!-- info section -->
   <section class="info_section layout_padding">
     <div class="container">
       <div class="row">
@@ -203,11 +171,7 @@ session_start();
                   Gallery
                 </a>
               </li>
-              <li>
-                <a href="contact.php">
-                  Contact Us
-                </a>
-              </li>
+            
             </ul>
           </div>
         </div>
@@ -259,5 +223,18 @@ session_start();
   <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
+
+<script>
+  $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+  </script>
 
 </html>
