@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>CSCI 443/543 - User Interface Design - Spring 2023</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link rel="stylesheet" href="../../assets/css/wa_style.css">
+  <link rel="stylesheet" href="../../assets/css/navstyle.css">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+</head>
+
+<body>
+
+
+//<div class="main">
+
+  <div id="root">
+
+    <div class="sidenav">
+      <img src="../../assets/img/Rendezvous.png" width="110" height="110" style="padding-left: 10px; padding-top: 20px;">
+      <a href="#top">Problem</a>
+      <a href="#early-design">Early Design</a>
+      <a href="#storyboard">Storyboard</a>
+      <a href="#design_crits">Design Crits</a>
+      <a href="#prototype">Prototype</a>
+      <a href="#user_testing">User Testing</a>
+    </div>
+
+    <header id="top" class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-12peh0i" style="background-color: maroon;" >
+
+      <div class="MuiContainer-root MuiContainer-maxWidthLg css-1qsxih2" style="background-color: maroon; ">
+        <div class="MuiToolbar-root MuiToolbar-regular css-8p5sgb" style="background-color: maroon; ">
+          <div class="MuiBox-root css-1p5pnqt" role="navigation" aria-label="Primary">
+
+
+            <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1f5vq29" href="/courses/cse440/22sp/" tabindex="0">
+              <div class="MuiBox-root css-0">CSCI 443/543 - User Interface Design - Spring 2023</div>
+              <span class="MuiTouchRipple-root css-w0pj6f">
+	</span>
+            </a>
+            <div class="MuiBox-root css-i9gxme">
+            </div>
+
+            <a class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-a6kcvm" href="../../index.html" tabindex="0">
+              <div class="MuiBox-root css-11wbtq8">Projects</div>
+              <span class="MuiTouchRipple-root css-w0pj6f">
+	</span>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="MuiContainer-root MuiContainer-maxWidthLg css-1qsxih2" style="font-size: 18px;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1gop1xy">
+        <div class="MuiBox-root css-13o7eu2">
+          <div class="MuiBox-root css-qwy28t" role="main">
+
+
+            <h1>Rendezvous</h1>
+            <div class="MuiBox-root css-m507i9">
+              <p class="MuiTypography-root MuiTypography-body1 css-lj8hfv">Craft Legendary Journeys. Forge Unparalleled Memories. Uncover Rendezvous Now!</p>
+            </div>
+
+            <h2 id="team-members">Team Members</h2>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+
+              <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+                <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s18byi">
+                  <div class="MuiCardContent-root css-1qw96cp">
+                    <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1td92wh" href="./projects/project_detail.html">
+                      <div class="css-j7qwjs">Taylor Powell<img src="./images/TaylorPhoto.png" alt="Photo of Taylor Powell" width="150">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+                <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s18byi">
+                  <div class="MuiCardContent-root css-1qw96cp">
+                    <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1td92wh">
+                      <div class="css-j7qwjs">Kavin Wickham<img src="./images/KavinPhoto.png" alt="Photo of Kavin Wickham" width="150">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <h2 id="problem-and-design-overview">Problem</h2>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-1718kzu">
+                <p>When planning for a vacation/trip a hotel has to be booked, flights, rental cars, activities and usually they’re booked on different websites. This then creates the issue of the information for all of these separate but very important things being disorganized and all over the place. Rendezvous aims to fix that problem by creating a streamlined application that allows a user to either import all of their travel itinerary details or add in details manually. Rendezvous then gives the user a “one stop shop” of sorts to access all of their travel itinerary details.</p>
+
+              </div>
+
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-1718kzu">
+                <div class="MuiBox-root css-1vp8jwk">
+                  <div class="MuiBox-root css-1vp8jwk">
+                    <div class="MuiBox-root css-1j8t7mm">
+                      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                        <img src="./images/welcomes.png" style="max-height:400px;max-width:100%">
+                        <figcaption style="font-size: 14px;"><center><em>Initial login screen</em></center></figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-1718kzu">
+                <div class="MuiBox-root css-1vp8jwk">
+                  <div class="MuiBox-root css-1vp8jwk">
+                    <div class="MuiBox-root css-1j8t7mm">
+                      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                        <img src="./images/sharepage.png" style="max-height:400px;max-width:100%">
+                        <figcaption style="font-size: 14px;"><center><em>Share itineraries</em></center></figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <h2 id="early-design">Early Design</h2>
+            <p>We wanted to first and foremost confirm that there was a problem to be solved before we put in the effort of designing a solution. So because of that the primary focus of our early design research was to figure out exactly what problems people had with traditional itinerary building/travel management apps. We then wanted to know what sorts of solutions people were looking for, whether it was an easier to use interface, more transparent travel information displays, etc. </p>
+
+            <h3 id="key-insights">Early Questions</h3>
+            <p> After conducting our initial research into the software we wanted to create and the users we were looking for we settled on a few questions that we would seek answers to.</p>
+            <p>	1. What are the main problems users have with current/traditional travel/itinerary management apps?<br>
+              2. What information are users finding most important when traveling?<br>
+              3. How comfortable are users at planning their own itineraries and keeping all of the information organized?</p>
+
+            <h3 id="key-insights">Methods for Gathering Feedback</h3>
+            <p> To gather feedback for the early development of our product we conducted a series of in-person interviews as well as an anonymous questionnaire sent out mostly to employees of varying ages at TrailWest Bank.</p>
+            <p> For the Interviews, we asked specific questions that would help us gather detailed information about our users. Such as how our users plan their travel itineraries, what they dislike about other travel planning apps, what challenges they've faced, and if they were traveling in groups.<br><br>
+              For the Questionnaire, we asked more general questions that allowed us to learn more basic information about our users. Such as how often our users travel, how difficult they find it to keep travel information together, and how comfortable they are with traveling and planning. We also asked about whether they faced challenges while traveling, and if a one-stop shop of sorts would be helpful for group travel.
+            </p>
+
+            <h3 id="key-insights">Key Insights</h3>
+
+            <h4><em>1. Majority of people travel less than half a dozen times per year.</em></h4>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                <p>Most people that we interviewed/took the questionnaire travel 1-6 times a year (96.4% of all questionnaire responses) we believe this would translate well to a wide-scale questionnaire being asked all over the country.<br>
+                <center><img src="./images/PercentantageTravelled.png" alt="Question 1 Results" width="60%" ></center>
+                </p>
+                <p>The fact the majority of potential users of our product don't travel very often means they wouldn't be interacting with our interface on a consistent basis. Because of this, our users wouldn't be able to develop a deep familiarity and understanding of our interface. Essentially users would come back to our app and not remember each and every detail of the interface. This made us realize we needed to make creating a simple and easy-to-use interface a main priority.</p>
+                <center><img src="./images/SimpleInterface1.png" alt="Interface Example 1" width="200"></center>
+                <p>So we created an interface that was simple to understand (Shown in the image above and below) so even if users only used our product a maximum of 6 times a year they would be able to return and use the interface.</p>
+                <center><img src="./images/SimpleInterface2.png" alt="Interface Example 1" width="200"></center>
+              </div>
+
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                <div class="MuiBox-root css-1vp8jwk">
+                  <div class="MuiBox-root css-1vp8jwk">
+                    <div class="MuiBox-root css-1j8t7mm">
+                      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                        <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <h4><em>2. Majority of users experienced some sort of issue when traveling (i.e. delayed flights, getting lost, finding accommodations, etc.).</em></h4>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+              <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                <p>Surprisingly enough a slight majority of users in our questionnaire stated that they did NOT struggle to find gates, car rental locations, hotels, etc. This was interesting to us, in the early design phase we had considered adding an airport map feature, that would allow the user to view a map of whatever airport they were in. But after the interviews and the questionnaire, this decision became harder because it was so split on whether users had issues locating their flight gates while they are traveling. After some back and forth and more research, we came to the conclusion that we did not need an airport map feature. Airports nowadays are designed to be easy to navigate, as well as other apps such as Google Maps or Apple Maps making it incredibly easy to look at your phone and find gates. <br>
+                <center><img src="./images/StruggletoFind.png" alt="Percentage Struggled" width="60%" ></center>
+                </p>
+                <p>We then asked the user if they had experienced other issues when traveling including getting lost and this is when the results changed. The majority of users experienced an issue while traveling these included; not finding accommodations, delayed or missed flights, prices being too high, as well as getting lost. It was clear to us that the majority of users were having some sort of major problem every time they traveled. There was a problem to be solved when it came to travel and how the information was organized.</p>
+                <center><img src="./images/TypesofProblems.png" alt="Types of Problems" width="60%"></center>
+              </div>
+
+              <h4><em>3. Whether or not users found it difficult to keep travel information organized.</em></h4>
+              <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                  <p>When it came to how users felt when it came to their ability to keep travel information organized it was a bit of a mixed bag. On one hand, we asked a simple "yes" or "no" do you find it challenging to keep travel information organized? And in this case, a small majority of users said yes (55.4%).</p>
+                  <center><img src="./images/PercentantageTravelled.png" alt="Managing Travel" width="60%"></center>
+                  <p>But then again when we asked how comfortable (on a scale from 1-5) are you managing a complex itinerary a majority said 3 or higher (41 out of 56 responses). This gave us the insight that a lot of users were able to book their own trips fairly easily but actually managing all the information and making sense of it was a different story</p>
+                  <center><img src="./images/ManagingTravel.png" alt="Managing Travel" width="60%"></center>
+                </div>
+
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                  <div class="MuiBox-root css-1vp8jwk">
+                    <div class="MuiBox-root css-1vp8jwk">
+                      <div class="MuiBox-root css-1j8t7mm">
+                        <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                          <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 	STORYBOARD SECTION -->
+
+              <h2 id="storyboard">Storyboard</h2>
+              <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                  <p>These sketches below ended up being the building blocks to our final product. We had several ideas within these skethches that ended up being scrapped or modified. Overall though the heart and soul of our application is displayed in these sketches.</p>
+                </div>
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                  <center>
+                    <h4>Initial Mobile Signup Screen</h4>
+                    <img src="images/SBSignUp.jpg" alt="Mobile Signup Page" width="30%">
+                    <p>Our initial design for the signup page was incredibly simple. This is what we were aiming for in the overall design yet we needed to have some sort of flare to make us memorable. So we decided on a background image and other effects on the text and buttons. This made our user interface much more enjoable to look at and navigate.</p>
+                  </center>
+                  <div class="MuiBox-root css-1vp8jwk">
+                    <center>
+                      <h4>Initial Mobile Home Screen</h4>
+                      <img src="images/SBMainScreen.jpg" alt="Mobile Mainscreen" width="30%">
+                      <p>Our initial design for the home page was again very simple, this was the style we wanted. Except unlike our inital design for the signup page, our implemented design ended up being very similar to the storyboard above. We liked the idea of tiles for each individual itinerary, as well as the "cool pic" for a background. Which we later carried that idea onto every page.</p>
+                    </center>
+                    <div class="MuiBox-root css-1vp8jwk">
+                      <center>
+                        <h4>Initial Import ID Screen</h4>
+                        <img src="images/SBImportID.jpg" alt="Mobile Import ID Screen" width="30%">
+                        <p>This storyboard idea ended up being scrapped due to limitations on time for development, and limited applications. The idea was to have a screen with the function for the user to upload images of different types of IDs to be used (i.e. Drivers License, Passport, Certifications, etc). The above screen would also then display the IDs the user had uploaded, they would then be able to present them to whomever needed them. Another problem we saw with this idea was a lot of times where a user needs to present identification they need the physical ID.</p>
+                      </center>
+                      <div class="MuiBox-root css-1vp8jwk">
+                        <center>
+                          <h4>Initial Details Page </h4>
+                          <img src="images/SBWebsiteHotel.jpg" alt="Details Pagereen" width="30%">
+                          <p>
+                            This storyboard idea has changed since its conception. Due to limitations on time for development and limited applications, we have now made the individual details a lot more simplified. The idea was to have the ability to check in, check bags, view maps, etc. but now we have changed the details pages to the key information. We have still mantained the ability to click a Manage link to go to the third party website to access and edit the reservation.</p>
+                        </center>
+                        <div class="MuiBox-root css-1vp8jwk">
+                          <center>
+                            <h4>Initial Itinerary Details Page</h4>
+                            <img src="images/SBWebsiteItineraryDetails.jpg" alt="Mobile Import ID Screen" width="30%">
+                            <p>This storyboard idea ended up being changed and is no longer clickable tabs but a listed page. Clicking on the tabs would show each details for the flights, hotels, cars, etc. and be able to click to go to the details page for it. It would show all key information, and going to the more specific detail page would show other information, but we had scrapped that to limit the amount of page changing and to keep things on a singular page without traveling to another one.</p>
+                          </center>
+                          <div class="MuiBox-root css-1vp8jwk">
+                            <center>
+                              <h4>Initial Home Page</h4>
+                              <img src="images/SBWebsiteItineraryDetails.jpg" alt="Mobile Import ID Screen" width="30%">
+                              <p>This storyboard idea was the web-based style for our homepage. We ended up deciding to only pursue mobile-based styles and scrapped this in its entirety, but kept some aspects, like the tiles for each itinerary. We have removed the Drafts, Past, etc. for development time to flush out the bigger key details of Rendezvous. We also removed the search bar/acting as a business managing itineraries since this was just out of the scope of Rendezvous. However, the cool image and the tiled itineraries are still present in our mobile design today.</p>
+                            </center>
+                            <div class="MuiBox-root css-1j8t7mm">
+                              <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- 	DESIGN CRIT SECTION -->
+
+                    <h2 id="design_crits">Design Crits</h2>
+                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                        <p>Our iterative design process mandated that we gather user feedback early and often throughout the design cycle. Using our low-fidelity prototypes, we engaged in a number of design critiques (crits) with other students in our class as well as with the instructor. We also performed a heuristic evaluation by ...</p>
+                        <p>The main insights we gathered from our design crits and prototype evaluations included .. These affected changes to our designs in the following (illustrated ways)...</p>
+                        <ul>
+                          <li>We narrowed down the app to focus just on stocks and cryptocurrencies.</li>
+                          <li>We split the sign up questionnaire into 3 screens instead of trying to fit everything into a scrollable screen.</li>
+                          <li>We also included a mini click through tutorial to explain why we needed the information.</li>
+                        </ul>
+
+                      </div>
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                        <div class="MuiBox-root css-1vp8jwk">
+                          <div class="MuiBox-root css-1vp8jwk">
+                            <div class="MuiBox-root css-1j8t7mm">
+                              <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                    <!-- 	HIGH FIDELITY PROTOTYPE SECTION -->
+
+                    <h2 id="prototype">High-fidelity Prototype</h2>
+                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                        <p>After gathering feedback and conducting a heuristic evaluation on our early prototype attempts, we incorporated much of it as we created a high-fidelity prototype. The software we used to create our high-fidelity prototype is ... and the main changes we included were 1)... 2)... 3).</p>
+                        <p>The screen shots that provide a mini-walkthrough of some of the main scenarios and tasks that users would follow given our interface. </p>
+
+                        <h3 id="resulting-design">Scenario 1:</h3>
+                        <p>Imagine you are running late from work and no longer have time to stop at the grocery store to pick up items for dinner. You still need to ..,</p>
+
+
+                        <h4><em>Task 1: Check pantry</em></h4>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1c1smpn">
+                            <p>From the home screen, users would log into the system.</p>
+                          </div>
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-1718kzu">
+                            <div class="MuiBox-root css-1vp8jwk">
+                              <div class="MuiBox-root css-1vp8jwk">
+                                <div class="MuiBox-root css-1j8t7mm">
+                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                    <img src="/courses/cse440/22sp/assets/projects/src/projects/bloom/assets/post//5_task1_learn.png" style="max-height:400px;max-width:100%">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1c1smpn">
+                            <p>After successful login, users can select to view items in their pantry. </p>
+                          </div>
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                            <div class="MuiBox-root css-1vp8jwk">
+                              <div class="MuiBox-root css-1vp8jwk">
+                                <div class="MuiBox-root css-1j8t7mm">
+                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                    <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </h3>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1c1smpn">
+                            <p>From here they can choose...</p>
+                          </div>
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                            <div class="MuiBox-root css-1vp8jwk">
+                              <div class="MuiBox-root css-1vp8jwk">
+                                <div class="MuiBox-root css-1j8t7mm">
+                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                    <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1c1smpn">
+                            <p>Next, they can ....</p>
+                          </div>
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                            <div class="MuiBox-root css-1vp8jwk">
+                              <div class="MuiBox-root css-1vp8jwk">
+                                <div class="MuiBox-root css-1j8t7mm">
+                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                    <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- 	USER TESTING SECTION -->
+                        <h2 id="user_testing">User Testing</h2>
+                        <p>The primary focus of our design research was to better understand what college students already know about personal finance... Some initial questions we had included .... To gather early user feedback we did .... In our surveys we asked about... In our interviews we asked about...  </p>
+
+                        <h3>Key Insights</h3>
+
+                        <h4><em>1. Current processes deeply flawed</em></h4>
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-1tz8m30">
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                            <p>Every single one of our participants shared that they ...</p>
+                          </div>
+                          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-gp0h3g">
+                            <div class="MuiBox-root css-1vp8jwk">
+                              <div class="MuiBox-root css-1vp8jwk">
+                                <div class="MuiBox-root css-1j8t7mm">
+                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1lnqg4h">
+                                    <img src="../projects/Pocket_Pantry/images/dummy_image.png" style="max-height:400px;max-width:100%">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                        <h4><em>2. Balancing Personalization and Privacy</em></h4>
+                        <p>Multiple participants indicated that if there was some way to learn and guide them in ...</p>
+
+
+
+                        <!-- ENDING TAGS -->
+
+                      </div>
+
+</body>
+</html>
